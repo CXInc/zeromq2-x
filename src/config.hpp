@@ -29,7 +29,8 @@ namespace zmq
     enum 
     {
         //  Maximum number of sockets that can be opened at the same time.
-        max_sockets = 1024,
+        // CX is perhaps mistakenly customizing this value to "fix" some ZeroMQ errors
+        max_sockets = 40000,
 
         //  Number of new messages in message pipe needed to trigger new memory
         //  allocation. Setting this parameter to 256 decreases the impact of
